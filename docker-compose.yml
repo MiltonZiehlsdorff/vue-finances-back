@@ -5,12 +5,12 @@ services:
   api:
     build: .
     ports:
-      - "3000:3000"
+      - "4000:4000"
     environment:
       CLIENT_HOSTS:
       JWT_SECRET:
       NODE_ENV:
-      PRISMA_ENDPOINT: http://prisma:4466
+      PRISMA_ENDPOINT: http://prisma
       PRISMA_SERVICE:
       PRISMA_STAGE:
       PRISMA_SERVICE_SECRET:
@@ -41,7 +41,7 @@ services:
     image: postgres:10.3
     restart: always
     ports:
-    - "5433:5432"
+    - "5432:5432"
     environment:
       POSTGRES_USER: prisma
       POSTGRES_PASSWORD: prisma

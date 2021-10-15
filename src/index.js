@@ -23,11 +23,14 @@ console.log('index-endpoint: ', endpoint)
 console.log('index-origin: ', origin)
 console.log('index-playground: ', playground)
 console.log('index-secret: ', secret)
+/* console.log('index-typeDefs: ', typeDefs) */
+console.log('index-__dirname: ', __dirname )
 
 server.start({
 playground,
-cors:{ origin },
-port:3000
-}).then(() => console.log('Server running on http://localhost:3000...'))
+	cors: { 
+		origin },
+	port:4000
+}).then(() => console.log('Server running on http://localhost:4000...'))
 
 // Segunda vez Milton............

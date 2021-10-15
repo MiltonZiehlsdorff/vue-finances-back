@@ -89,6 +89,7 @@ function totalBalance (_, { date}, ctx, info) {
   const userId = getUserId(ctx)
   const dateISO = moment(date, 'YYYY-MM-DD').endOf('day').toISOString()
   const pgSchema = `${process.env.PRISMA_SERVICE}$${process.env.PRISMA_STAGE}`
+console.log('Query-pgSchema: ', pgSchema);
 
   const mutation = `
     mutation totalBalance($database: PrismaDatabase, $query: String!) {
